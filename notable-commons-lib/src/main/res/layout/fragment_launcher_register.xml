@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    style="@style/LauncherFragmentStyle"
+    android:background="@color/primary">
+
+    <TextView
+        android:id="@+id/tvRegister"
+        style="@style/LauncherSubjectStyle"
+        android:text="@string/register" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etUsernameContainer"
+        style="@style/LauncherEditTextStyle"
+        android:layout_below="@+id/tvRegister">
+
+        <EditText
+            android:id="@+id/etUsername"
+            style="@style/LauncherEditTextStyle"
+            android:hint="@string/hint_username"
+            android:inputType="textPersonName"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etEmailContainer"
+        style="@style/LauncherEditTextStyle"
+        android:layout_below="@+id/etUsernameContainer">
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/LauncherEditTextStyle"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etPasswordContainer"
+        style="@style/LauncherEditTextStyle"
+        android:layout_below="@+id/etEmailContainer">
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/LauncherEditTextStyle"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/ButtonStyle"
+        android:layout_below="@+id/etPasswordContainer"
+        android:text="@string/btn_register"
+        android:visibility="invisible" />
+</RelativeLayout>

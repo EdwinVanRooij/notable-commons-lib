@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Default colors - should be unused-->
+    <color name="primary">#999999</color>
+    <color name="primary_dark">#595959</color>
+    <color name="accent">@color/white</color>
+
+    <color name="light">#ecf0f1</color>
+
+    <color name="background_listview">@android:color/background_light</color>
+
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorLight">#ecf0f1</color>
+
+    <array name="swipeRefreshColors">
+        <item>@color/primary</item>
+        <item>@color/primary_dark</item>
+        <item>@color/accent</item>
+    </array>
+</resources>

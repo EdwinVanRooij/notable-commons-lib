@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TextView dimens-->
+    <dimen name="launcherAppName">49sp</dimen>
+
+    <dimen name="textSizeH1">30sp</dimen>
+    <dimen name="textSizeH2">26sp</dimen>
+    <dimen name="textSizeH3">22sp</dimen>
+
+    <dimen name="textSizeLarge">22sp</dimen>
+    <dimen name="textSizeMedium">18sp</dimen>
+    <dimen name="textSizeSmall">14sp</dimen>
+
+    <!--todo: clean this page up-->
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="subject_text_size">25sp</dimen>
+    <dimen name="text_text_size">15sp</dimen>
+
+    <dimen name="button_height">75dp</dimen>
+    <dimen name="new_product_text_size">25sp</dimen>
+    <dimen name="new_product_text_size_remark">20sp</dimen>
+
+    <!--TextView style-->
+    <dimen name="big_letters">49sp</dimen>
+    <dimen name="semi_big_letters">34sp</dimen>
+    <dimen name="textview_margin_bottom">10dp</dimen>
+</resources>

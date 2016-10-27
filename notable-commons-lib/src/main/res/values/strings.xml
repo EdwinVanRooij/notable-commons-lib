@@ -1,0 +1,47 @@
+<resources>
+    <!--General-->
+    <string name="positive">Ja</string>
+    <string name="negative">Nee</string>
+    <string name="waiting_head">Wachten</string>
+    <string name="waiting_content">Wachten…</string>
+
+    <!--Default menu items-->
+    <string name="navigation_home">Home</string>
+    <string name="navigation_feedback">Feedback</string>
+    <string name="navigation_logout">Uitloggen</string>
+    <string name="navigation_help">Help</string>
+
+    <!--Placeholders - to be overridden-->
+    <string name="app_name" translatable="false">DefaultAppName</string>
+    <string name="content_description_logo">Default logo description</string>
+    <string name="path_to_mainactivity" translatable="false">default</string>
+
+    <!--Placeholders - views-->
+    <string name="placeholder_text" translatable="false">Text</string>
+    <string name="placeholder_number" translatable="false">25</string>
+    <string name="placeholder_decimal" translatable="false">12.00</string>
+    <string name="placeholder_date" translatable="false">15–03–2015</string>
+    <string name="placeholder_email" translatable="false">email@outlook.com</string>
+    <string name="placeholder_desc" translatable="false">This is a description.</string>
+
+    <!--Feedback-->
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_hint_description">Beschrijf suggestie/probleem</string>
+    <string name="feedback_send">Verzenden</string>
+    <string name="feedback_bug">Foutmelding</string>
+    <string name="feedback_suggestion">Suggestie</string>
+    <string name="ab_add_user">Gebruiker toevoegen</string>
+    <string name="action_help">Help</string>
+    <string name="action_search">Zoeken</string>
+
+    <!--Login-->
+    <string name="btn_login">Inloggen</string>
+    <string name="btn_register">Registreren</string>
+    <string name="register">Registreren</string>
+    <string name="login">Inloggen</string>
+    <string name="hint_username">Gebruikersnaam</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Wachtwoord</string>
+    <!--Exceptions-->
+    <string name="exception_login_credentials">Ongeldige inloggegevens of het account is geblokkeerd.\r\nProbeer opnieuw.</string>
+</resources>

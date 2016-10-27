@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+    <string name="content_description_logo">Default logo description</string>
+    <string name="exception_login_credentials">Invalid login credentials or the account is blocked.</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_username">Username</string>
+    <string name="login">Login</string>
+    <string name="negative">No</string>
+    <string name="positive">Yes</string>
+    <string name="register">Register</string>
+    <string name="waiting_content">Waiting…</string>
+    <string name="waiting_head">Waiting</string>
+</resources>

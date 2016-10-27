@@ -42,7 +42,6 @@ public class LoginFragment extends ValidationFragment {
     @Override
     protected void initialize() {
         localHandler = new LocalHandler(getActivity());
-        accountHandler = new AccountHandler(getActivity());
 
         initEditTexts();
         initButtons();

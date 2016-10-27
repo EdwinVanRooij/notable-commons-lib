@@ -18,10 +18,7 @@ import android.widget.EditText;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 
-import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.asynctasks.AsyncDataRequest;
-import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.asynctasks.AsyncURLRequest;
 import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.handlers.LocalHandler;
-import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.interfaces.AsyncResponse;
 import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.R;
 
 /**
@@ -54,7 +51,6 @@ public class RegisterFragment extends ValidationFragment {
     @Override
     protected void initialize() {
         localHandler = new LocalHandler(getActivity());
-        accountHandler = new AccountHandler(getActivity());
 
         initEditTexts();
         initButtons();
@@ -207,49 +203,9 @@ public class RegisterFragment extends ValidationFragment {
     }
 
     private void checkIfUsernameExists() throws UnsupportedEncodingException, MalformedURLException {
-        AsyncResponse a = new AsyncResponse() {
-            @Override
-            public void processFinish(String output) {
-                try {
-                    if (accountHandler.booleanFromJSON(output)) {
-                        Log.d(TAG, "processFinish: Username " + username + " already exists.");
-                        onUserExists();
-                        return;
-                    }
-
-                    // Username does not exists, proceed to create account
-                    Log.d(TAG, "processFinish: Username does not exist yet, checking email now");
-
-                    checkIfEmailExists();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        accountHandler.getUsername(a, username);
     }
 
     private void checkIfEmailExists() throws UnsupportedEncodingException, MalformedURLException {
-        AsyncResponse a = new AsyncResponse() {
-            @Override
-            public void processFinish(String output) {
-                try {
-                    if (accountHandler.booleanFromJSON(output)) {
-                        Log.d(TAG, "processFinish: Email " + email + " already exists.");
-                        onEmailExists();
-                        return;
-                    }
-                    // Email does not exists, proceed to create account
-                    Log.d(TAG, "processFinish: Email does not exist yet, proceeding to create account");
-
-                    createAccount();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        String query = "select count(*) boolean from account where email = '" + email + "';";
-        new AsyncDataRequest(a, getActivity(), AsyncURLRequest.queryType.Select, query, true).execute();
     }
 
     private void onUserExists() {
@@ -262,19 +218,6 @@ public class RegisterFragment extends ValidationFragment {
     }
 
     private void createAccount() throws UnsupportedEncodingException, MalformedURLException {
-        AsyncResponse a = new AsyncResponse() {
-            @Override
-            public void processFinish(String output) {
-                try {
-                    Log.d(TAG, "processFinish: Checking credentials after create account");
-                    checkCredentials(username, password);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-
-        accountHandler.insertAccount(a, username, email, password);
     }
 
     private boolean defaultChecksPassed() {

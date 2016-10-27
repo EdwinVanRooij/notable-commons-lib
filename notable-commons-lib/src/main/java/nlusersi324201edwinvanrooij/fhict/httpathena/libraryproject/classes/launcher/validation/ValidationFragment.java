@@ -13,7 +13,6 @@ import java.net.MalformedURLException;
 import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.handlers.GeneralHandler;
 import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.launcher.LauncherActivity;
 import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.handlers.LocalHandler;
-import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.interfaces.AsyncResponse;
 import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.classes.physical.Account;
 import nlusersi324201edwinvanrooij.fhict.httpathena.libraryproject.R;
 
@@ -26,7 +25,6 @@ public abstract class ValidationFragment extends Fragment {
     static Class loginSuccessActivity;
 
     LocalHandler localHandler;
-    AccountHandler accountHandler;
 
     private static final String TAG = "ValidationFragment";
 
@@ -75,26 +73,6 @@ public abstract class ValidationFragment extends Fragment {
     }
 
     void checkCredentials(String username, String password) throws UnsupportedEncodingException, MalformedURLException {
-        AsyncResponse a = new AsyncResponse() {
-            @Override
-            public void processFinish(String output) {
-                try {
-                    Account a = accountHandler.getAccountIfExists(output);
-                    if (a != null) {
-                        Log.d(TAG, "processFinish: Correct login");
-                        onCorrectCredentials(a);
-                    } else {
-                        Log.d(TAG, "processFinish: Incorrect login");
-                        onIncorrectCredentials();
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-
-        accountHandler.getAccount(a, username, password);
     }
 
     private void onCorrectCredentials(Account a) {

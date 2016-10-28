@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="/media/hdd/Storage/Projects/NotableCommonsLib" />
-            <option value="/media/hdd/Storage/Projects/NotableCommonsLib/notable-commons-lib" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/notable-commons-lib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

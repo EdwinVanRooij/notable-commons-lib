@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/NotableCommonsLib.iml" filepath="$PROJECT_DIR$/NotableCommonsLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notable-commons-lib/notable-commons-lib.iml" filepath="$PROJECT_DIR$/notable-commons-lib/notable-commons-lib.iml" />
+    </modules>
+  </component>
+</project>
